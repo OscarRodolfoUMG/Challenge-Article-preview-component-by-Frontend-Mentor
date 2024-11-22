@@ -43,7 +43,7 @@ Mobile - Active
 ### Links
 
 - Solution URL: [Frontend Mentor](https:/)
-- Live Site URL: [GitHub Pages](https:/)
+- Live Site URL: [GitHub Pages](https://oscarrodolfoumg.github.io/Challenge-Article-preview-component-by-Frontend-Mentor/)
 
 ## My process
 
