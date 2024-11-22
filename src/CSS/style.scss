@@ -1,0 +1,220 @@
+@use "_normalize.scss";
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+//Variables de color
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $Light-Grayish-Blue;
+  height: 100vh;
+}
+
+main {
+  background-color: white;
+  border-radius: 1rem;
+  width: 25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+article {
+  padding: 2rem 2rem 1rem 2rem;
+  h1 {
+    color: $Very-Dark-Grayish-Blue;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.35;
+  }
+  p {
+    color: $Desaturated-Dark-Blue;
+    font-size: 1.07em;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.img-container {
+  background-image: url("../images/drawers.jpg");
+  border-radius: 1rem 1rem 0 0;
+  height: 16.5rem;
+  background-size: cover;
+}
+
+.landscape {
+  position: relative;
+}
+
+.user-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 0rem 2rem 0.5rem 2rem;
+  height: 4rem;
+  &__photo-container {
+    margin: auto 0;
+    img {
+      border-radius: 50%;
+      height: 3rem;
+    }
+  }
+  &__contact {
+    margin-left: 1rem;
+    &-name {
+      color: $Very-Dark-Grayish-Blue;
+      font-weight: 700;
+      margin: 0;
+    }
+    &-date {
+      color: $Desaturated-Dark-Blue;
+      margin: 0.5em 0;
+    }
+  }
+  &__photo-container,
+  &__contact {
+    align-self: flex-start;
+  }
+  &__share-container {
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: $Light-Grayish-Blue;
+    &__share-icon {
+      color: $Desaturated-Dark-Blue;
+      scale: 1.2;
+    }
+  }
+}
+
+.links-share {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+
+  justify-content: center;
+  padding: 0rem 2rem 0.5rem 2rem;
+  height: 4rem;
+  width: 21rem;
+
+  background-color: $Very-Dark-Grayish-Blue;
+  color: white;
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+
+  &__link-container {
+    svg {
+      margin-left: 1rem;
+    }
+    svg:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__share-container {
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: $Desaturated-Dark-Blue;
+    &__share-icon {
+      color: white;
+      scale: 1.2;
+    }
+  }
+}
+
+footer {
+  user-select: none;
+  font-size: 11px;
+  text-align: center;
+  opacity: 20%;
+  margin-top: 1rem;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: 630px) {
+  main {
+    display: flex;  
+    flex-direction: row;
+    width: 43rem;
+  }
+  .img-container {
+    background-image: url("../images/drawers.jpg");
+    border-radius: 1rem 0 0 1rem;
+    width: 20rem;
+    height: 100%;
+    background-size: cover;
+  }
+  article {
+    padding: 2rem 2rem 0rem 2rem;
+    width: 22rem;
+  }
+  p {
+    font-size: 0.78em !important;
+  }
+
+  .user-share {
+    &__photo-container {
+      img {
+        height: 2.5rem;
+      }
+    }
+    &__contact {
+      &-name {
+        margin-top: 1em;
+      }
+    }
+  }
+  .links-share {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 14.7rem;
+
+    border-radius: 0.5rem;
+    padding: 0 2rem 0 2rem;
+    height: 3rem;
+    width: 12rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    p{
+      opacity: 70%;
+    }
+    &__share-container{
+      display: none;
+    }
+  }
+  .__arrow {
+    position: absolute;
+    bottom: -1.45rem;
+    width: 0;
+    height: 0;
+    border: 0.7rem solid transparent;
+    border-top: 0;
+    border-top: 0.8rem solid $Very-Dark-Grayish-Blue;
+  }
+  footer{
+    margin-top: 2rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
