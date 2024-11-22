@@ -42,7 +42,7 @@ Mobile - Active
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https:/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/article-preview-component-html-and-sass-UGfI43Jngs)
 - Live Site URL: [GitHub Pages](https://oscarrodolfoumg.github.io/Challenge-Article-preview-component-by-Frontend-Mentor/)
 
 ## My process
